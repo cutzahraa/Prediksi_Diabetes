@@ -47,7 +47,7 @@ def main():
         'ever_married': [ever_married],
         'avg_glucose_level': [avg_glucose_level],
         'bmi': [bmi],
-        'smoking status': [smoking_status]
+        'smoking_status': [smoking_status]  # ✅ pakai underscore!
     }
     
     input_df = pd.DataFrame(input_data)
@@ -56,7 +56,7 @@ def main():
     model = pickle.load(open('stroke.pkl', 'rb'))
 
     # Tampilan utama
-    st.title('PREDIKSI PENYAKIT STROKE')
+    st.title('🩺 PREDIKSI PENYAKIT STROKE')
     st.write('Selamat datang di aplikasi prediksi risiko stroke.')
 
     if st.button('Predict'):
@@ -68,6 +68,6 @@ def main():
             st.error('⚠️ Terdapat Risiko Terjangkit Stroke')
 
 
-# Pastikan main() dijalankan
+# Jalankan fungsi utama
 if __name__ == '__main__':
     main()
